@@ -6,9 +6,10 @@ const getCategory=async()=>{
 const pushcategory=(data)=>{
     const categoryContainer=document.getElementById('category-container')
     data.forEach(data=>{
-        const categoryList=document.createElement('ul')
+        const categoryList=document.createElement('div')
+        categoryList.classList=``
         categoryList.innerHTML=`
-        <li onclick="cardContainer(${data.category_id})" class="px-4 py-2 bg-gray-300 text-base font-medium hover:bg-scondary-color active:text-white active:bg-scondary-color list-none rounded-md">${data.category}</li>
+        <button onclick="cardContainer(${data.category_id})" class="px-4 py-2 bg-gray-300 text-base font-medium hover:bg-scondary-color focus:text-white focus:bg-scondary-color  list-none rounded-md cursor-pointer">${data.category}</button>
         `
         categoryContainer.appendChild(categoryList)
     })
@@ -23,14 +24,18 @@ const pushCard=(data)=>{
     cardContainer.textContent=' '
     data.forEach(data=>{
         console.log(data); 
+
+        const scondTotal=data.others.posted_date
+        const hours=Math.floor(scondTotal/3600)
+        const minutes=Math.floor((scondTotal%3600)/60)
         const div=document.createElement('div')
         div.innerHTML=`
         <div class="card rounded-none  bg-gray-200 text-black">
-        <figure class="h-[200px] ">
-          <img class="hover:scale-125 hover:overflow-hidden duration-300 h-full w-full"
-            src=${data.thumbnail}/>
-        </figure>
-        <div class=" ml-4 my-5 ">
+        <figure class="h-[200px] relative">
+        <img class="hover:scale-125 hover:overflow-hidden duration-300 h-full w-full" src=${data.thumbnail} /> 
+        <div class="bg-black bg-opacity-70  text-white px-2 py-1 rounded-sm absolute right-2 bottom-1" >${scondTotal>0? `${hours} hrs ${minutes} min ago`: ' '} </div> 
+      </figure>
+        <div class=" ml-4 my-5 ">    
           <div class="card-footer flex justify-between mt-4">
             <div class="flex">
               <div>
@@ -57,6 +62,8 @@ const pushCard=(data)=>{
         `
         cardContainer.appendChild(div)
     })
+    
 }
+
 getCategory()
 cardContainer('1000')
