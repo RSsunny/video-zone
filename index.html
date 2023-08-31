@@ -34,32 +34,35 @@
 </head>
 <body class="max-w-7xl mx-auto px-4  font-inter primary-color">
 <header>
-    <nav class="flex justify-between gap-3 my-5 border-b pb-5">
-        <div class="flex gap-3 items-center">
-            <img src="./image/fi_3039386.svg" alt="">
-            <h1 class="text-3xl font-bold"><span class="text-scondary-color">PH</span>Tube</h1>
+    <nav class=" md:flex justify-between   my-5 border-b  md:pb-5 space-y-5">
+       <div class="flex justify-between">
+        <div class="flex gap-3 items-start ">
+          <img src="./image/fi_3039386.svg" alt="">
+          <h1 class="text-3xl font-bold"><span class="text-scondary-color">PH</span>Tube</h1>
+      </div>
+      <div class="text-center">
+        <button class="text-lg font-medium px-4 py-2 bg-gray-300      hover:bg-scondary-color  focus:text-white focus:bg-scondary-color  list-none rounded-md cursor-pointer md:hidden">Blog</button>
+    </div>
+       </div>
+        <div class="text-center">
+            <button onclick="shortVew()" class="text-lg font-medium px-4 py-2 bg-gray-300      hover:bg-scondary-color  focus:text-white focus:bg-scondary-color  list-none rounded-md cursor-pointer">Sort by view</button>
         </div>
-        <div>
-            <button class="text-lg font-medium px-4 py-2 bg-gray-300      hover:bg-scondary-color  focus:text-white focus:bg-scondary-color  list-none rounded-md cursor-pointer">Sort by view</button>
-        </div>
-        <div>
-            <button class="text-lg font-medium px-4 py-2 bg-gray-300      hover:bg-scondary-color  focus:text-white focus:bg-scondary-color  list-none rounded-md cursor-pointer">Blog</button>
+        <div class="text-center">
+            <button class="text-lg font-medium px-4 py-2 bg-gray-300      hover:bg-scondary-color  focus:text-white focus:bg-scondary-color  list-none rounded-md cursor-pointer hidden md:block">Blog</button>
         </div>
     </nav>
 </header>
 <main>
- 
-  
-
     <!-- catagory section -->
     <section>
-         <div id="category-container" class="flex justify-center items-center gap-5">
+         <div id="category-container" class="flex justify-center items-center gap-5 ">
             <!-- <li class="px-4 py-2 bg-gray-300 text-base font-medium hover:bg-scondary-color hover:text-white active:bg-scondary-color list-none rounded-md">All</li> -->
          </div>
     </section>
     <!-- card- section -->
     <section>
         <div id="card-container"  class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 my-20 "></div>
+        <div id="empty-container" class="flex justify-center items-center max-h-[600] mx-auto "></div>
     </section>
 
 </main>
