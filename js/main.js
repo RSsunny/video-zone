@@ -14,10 +14,10 @@ const pushcategory=(data)=>{
         categoryContainer.appendChild(categoryList)  
     })
 }
-const cardContainer=async(id,issort)=>{
+const cardContainer=async(id)=>{
     const res=await fetch(`https://openapi.programming-hero.com/api/videos/category/${id}`)
     const data=await res.json()
-    pushCard(data.data,issort)
+    pushCard(data.data)  
 }
 const pushCard=(data)=>{
     const cardContainer=document.getElementById('card-container')
@@ -26,7 +26,6 @@ const pushCard=(data)=>{
     emptyContainer.textContent=' '
     if(data.length>0){  
     data.forEach(data=>{
-        console.log(data); 
         const scondTotal=data.others.posted_date
         const hours=Math.floor(scondTotal/3600)
         const minutes=Math.floor((scondTotal%3600)/60)
@@ -62,7 +61,7 @@ const pushCard=(data)=>{
         </div>
       </div> 
         `
-        cardContainer.appendChild(div)
+        cardContainer.appendChild(div)  
     })
     }
     else{
@@ -79,12 +78,11 @@ const pushCard=(data)=>{
       </div>
         `
         emptyContainer.appendChild(div)
-    } 
+    }
 }
 const shortView=async(id)=>{
   const res=await fetch(`https://openapi.programming-hero.com/api/videos/category/${id}`)
   const data=await res.json()
-  console.log(data.data); 
   sort(data.data)
 }
 const sort=(data)=>{
@@ -95,7 +93,6 @@ const sort=(data)=>{
   data.sort((a,b)=>parseInt(b.others.views)-parseInt(a.others.views))
   if(data.length>0){  
   data.forEach(data=>{
-      console.log(data); 
       const scondTotal=data.others.posted_date
       const hours=Math.floor(scondTotal/3600)
       const minutes=Math.floor((scondTotal%3600)/60)
@@ -150,12 +147,6 @@ const sort=(data)=>{
       emptyContainer.appendChild(div)
   } 
 }
-
-
-
-
-
-
 const blogPage=()=>{
   window.location='blog.html'
 }
