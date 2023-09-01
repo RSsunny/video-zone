@@ -24,8 +24,6 @@ const pushCard=(data)=>{
     const emptyContainer=document.getElementById('empty-container')
     cardContainer.textContent=' '
     emptyContainer.textContent=' '
-    // const array=parseInt(data.data.others.views)*100
-    // data.sort((a,b)=>parseInt(b.others.views)-parseInt(a.others.views))
     if(data.length>0){  
     data.forEach(data=>{
         console.log(data); 
@@ -152,6 +150,11 @@ const sort=(data)=>{
       emptyContainer.appendChild(div)
   } 
 }
+
+
+
+
+
 
 const blogPage=()=>{
   window.location='blog.html'

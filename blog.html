@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHero-tube</title>
+    <script src="https://kit.fontawesome.com/157ca521a6.js" crossorigin="anonymous"></script>
     <!-- daisyUI and Tailwind css -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -33,6 +34,93 @@
     </style>
 </head>
 <body class="max-w-7xl mx-auto px-4 my-20 font-inter primary-color">
+  <main class="">
+    <section>
+      <h1 class="text-4xl font-bold text-center mt-20 border-b border-black pb-5" >JavaScript Question and Answer Section</h1>
+      <div class="text-lg font-bold my-5">
+        <li>Discuss the scope of var, let, and const</li>
+        <li>Tell us the use cases of null and undefined</li>
+        <li>What do you mean by REST API?</li>
+      </div>
+    </section>
+    <section>
+      <div class="flex gap-2 items-center ">
+        <span><i class="fa-solid fa-angles-right"></i></span>
+        <h1 class="text-2xl font-bold">var, let, and const</h1>
+      </div>
+      <div class="border border-black w-full md:w-3/4 md:ml-5 my-5 p-5 text-base font-medium">    
+        <li>Var declarations are globally or function scoped</li>
+        <li>let and const are block scoped</li>
+        <li>Var variables can be updated and re-declared within the scope.</li>
+        <li>Let variables can be updated but not re-declared.</li>
+        <li>Const variables can neither be re-declared nor updated</li>
+        <li>Var and let can be initialized without being declared.</li>
+        <li>Const must be initialized during declaration.</li>
+        <div>
+          <h1 class="text-2xl font-bold my-2">summary:</h1>
+          <p>Before ES6 (2015), JavaScript had only Global Scope and Function Scope.ES6 introduced two important new JavaScript keywords: let and const.These two keywords provide Block Scope in JavaScript.Variables declared inside a { } block cannot be accessed from outside the block
+          </p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="flex gap-2 items-center ">
+        <span><i class="fa-solid fa-angles-right"></i></span>
+        <h1 class="text-2xl font-bold"> null and undefined</h1>
+      </div>
+      <div class="border border-black w-full md:w-3/4 md:ml-5 my-5 p-5 text-base font-medium">
+        <h1 class="text-2xl font-bold my-5">undefined :</h1>
+        <h1 class="font-semibold text-xl my-2">Variable Declaration:</h1> 
+        <li class="ml-3 list-none">When a variable is declared but not assigned a value, it is undefined by default.
+        </li> 
+        <h1 class="font-semibold text-xl my-2">Function Parameters:</h1>  
+        <li class="ml-3 list-none">
+          If a function is called with fewer arguments than it has parameters, the extra parameters will be undefined.
+        </li>
+        <h1 class="font-semibold text-xl my-2">Object Properties:</h1>
+        <li class="ml-3 list-none">
+          If you try to access an object property that doesn't exist, it will return undefined.
+        </li>
+        <h1 class="font-semibold text-xl my-2">Return Value of Functions:</h1>
+        <li class="ml-3 list-none">
+          If a function does not explicitly return a value, it returns undefined.
+        </li>
+        <h1 class="font-semibold text-xl my-2">Array Elements: </h1>
+        <li class="ml-3 list-none">If you access an array element that is beyond the array's bounds, it will return undefined.</li>
+        
+        <div>
+          <h1 class="text-2xl font-bold my-2">summary:</h1>
+          <p>
+            In practice, undefined is often seen as a programming mistake, indicating that something is not behaving as expected or that a variable has not been properly initialized. On the other hand, null is used more intentionally to represent the absence of a value in situations where it makes sense.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="flex gap-2 items-center ">
+        <span><i class="fa-solid fa-angles-right"></i></span>
+        <h1 class="text-2xl font-bold">REST API</h1>
+      </div>
+      <div class="border border-black w-full md:w-3/4 md:ml-5 my-5 p-5 text-base font-medium">    
+        <p class="text-justify">
+          REST technology is generally preferred to the more robust Simple Object Access Protocol (SOAP) technology because REST uses less bandwidth, simple and flexible making it more suitable for internet usage. It’s used to fetch or give some information from a web service. All communication done via REST API uses only HTTP request. 
+        </p>
+        <h1 class="text-xl font-bold mt-5 mb-2">HTTP Methods: </h1>
+        <p>RESTful APIs use standard HTTP methods (GET, POST, PUT, DELETE, etc.) to perform operations on resources. Each HTTP method corresponds to a specific CRUD (Create, Read, Update, Delete) operation:</p>
+        <li class="ml-3 mt-2">GET: Retrieve data from a resource</li>
+        <li class="ml-3 mt-2">POST: Create a new resource.</li>
+        <li class="ml-3 mt-2">PUT: Update an existing resource.</li>
+        <li class="ml-3 mt-2">DELETE: Remove a resource.</li>
+        <li class="ml-3 mt-2">And others like PATCH, HEAD, and OPTIONS.</li>
 
+        <div>
+          <h1 class="text-2xl font-bold my-2">summary:</h1>
+          <p>
+            An API, or application programming interface, is a set of rules that define how applications or devices can connect to and communicate with each other. A REST API is an API that conforms to the design principles of the REST, or representational state transfer architectural style. For this reason, REST APIs are sometimes referred to RESTful APIs.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
